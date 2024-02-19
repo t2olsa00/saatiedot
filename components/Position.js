@@ -37,12 +37,9 @@ export default function Position() {
       
       <Text style={styles.coords}>{latitude.toFixed(3)}, {longitude.toFixed(3)}</Text>
       <Text style={styles.message}>{message}</Text>
-      <Text style={styles.heading}>Current weather</Text>
       {isLoading === false &&
       <Weather latitude={latitude} longitude={longitude}
     />}
-
-
     </View>
   );
 }
@@ -51,12 +48,11 @@ const styles = StyleSheet.create({
     coords: {
       fontSize: 18,
       fontWeight: 'bold',
-      marginBottom: 0,
       color: '#333',
     },
     message: {
       marginBottom: 32,
       fontSize: 16,
-      color: '#666',
+      color: '#999',
     },
   });

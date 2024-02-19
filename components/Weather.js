@@ -34,7 +34,8 @@ export default function Weather(props) {
     }, [])
     
     return (
-        <View>
+        <View style={styles.container}>
+                  <Text style={styles.heading}>Current weather</Text>
             <Text style={styles.temp}>{temp}</Text>
             {icon &&
                 <Image source={{uri: icon}} style={{width: 100, height: 100}} />
@@ -48,7 +49,10 @@ const styles = StyleSheet.create({
     temp: {
         fontSize: 28,
         fontWeight: 'bold',
-        color: '#333', // Set your desired text color
+        color: '#333',
     },
-    // Add more styles as needed
+    container: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
